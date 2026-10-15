@@ -1,0 +1,3062 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dineug/erd-editor/main/json-schema/schema.json",
+  "version": "3.0.0",
+  "settings": {
+    "width": 3600,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "originX": 20,
+    "originY": 20,
+    "zoomLevel": 0.36,
+    "show": 1444,
+    "database": 2,
+    "databaseName": "Modelo lógico normalizado hasta 3FN Neuro Hub",
+    "canvasType": "ERD",
+    "language": 1,
+    "tableNameCase": 1,
+    "columnNameCase": 1,
+    "bracketType": 1,
+    "relationshipDataTypeSync": true,
+    "relationshipOptimization": false,
+    "columnOrder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "maxWidthComment": -1,
+    "ignoreSaveSettings": 0
+  },
+  "doc": {
+    "tableIds": [
+      "centro",
+      "persona",
+      "usuario",
+      "rol",
+      "usuario_centro_rol",
+      "nino",
+      "apoderado",
+      "especialista",
+      "nino_apoderado",
+      "especialista_nino",
+      "sesion",
+      "registro_seguimiento",
+      "objetivo",
+      "avance",
+      "documento_adjunto"
+    ],
+    "relationshipIds": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19"
+    ],
+    "indexIds": [
+      "nino_apoderado__regla_1",
+      "especialista_nino__regla_1",
+      "avance__regla_1"
+    ],
+    "memoIds": []
+  },
+  "collections": {
+    "tableEntities": {
+      "centro": {
+        "id": "centro",
+        "name": "centro",
+        "comment": "",
+        "columnIds": [
+          "centro__id_centro",
+          "centro__nombre_centro",
+          "centro__direccion",
+          "centro__telefono",
+          "centro__correo",
+          "centro__estado"
+        ],
+        "seqColumnIds": [
+          "centro__id_centro",
+          "centro__nombre_centro",
+          "centro__direccion",
+          "centro__telefono",
+          "centro__correo",
+          "centro__estado"
+        ],
+        "ui": {
+          "x": 1458.0,
+          "y": 180,
+          "zIndex": 1,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona": {
+        "id": "persona",
+        "name": "persona",
+        "comment": "",
+        "columnIds": [
+          "persona__id_persona",
+          "persona__nombres",
+          "persona__apellidos",
+          "persona__tipo_documento",
+          "persona__numero_documento",
+          "persona__telefono",
+          "persona__correo"
+        ],
+        "seqColumnIds": [
+          "persona__id_persona",
+          "persona__nombres",
+          "persona__apellidos",
+          "persona__tipo_documento",
+          "persona__numero_documento",
+          "persona__telefono",
+          "persona__correo"
+        ],
+        "ui": {
+          "x": 783.0,
+          "y": 660,
+          "zIndex": 2,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario": {
+        "id": "usuario",
+        "name": "usuario",
+        "comment": "",
+        "columnIds": [
+          "usuario__id_usuario",
+          "usuario__id_persona",
+          "usuario__nombre_usuario",
+          "usuario__contrasena_hash",
+          "usuario__fecha_alta",
+          "usuario__estado"
+        ],
+        "seqColumnIds": [
+          "usuario__id_usuario",
+          "usuario__id_persona",
+          "usuario__nombre_usuario",
+          "usuario__contrasena_hash",
+          "usuario__fecha_alta",
+          "usuario__estado"
+        ],
+        "ui": {
+          "x": 108.0,
+          "y": 660,
+          "zIndex": 3,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "rol": {
+        "id": "rol",
+        "name": "rol",
+        "comment": "",
+        "columnIds": [
+          "rol__id_rol",
+          "rol__nombre_rol",
+          "rol__descripcion"
+        ],
+        "seqColumnIds": [
+          "rol__id_rol",
+          "rol__nombre_rol",
+          "rol__descripcion"
+        ],
+        "ui": {
+          "x": 108.0,
+          "y": 180,
+          "zIndex": 4,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario_centro_rol": {
+        "id": "usuario_centro_rol",
+        "name": "usuario_centro_rol",
+        "comment": "",
+        "columnIds": [
+          "usuario_centro_rol__id_usuario",
+          "usuario_centro_rol__id_centro",
+          "usuario_centro_rol__id_rol"
+        ],
+        "seqColumnIds": [
+          "usuario_centro_rol__id_usuario",
+          "usuario_centro_rol__id_centro",
+          "usuario_centro_rol__id_rol"
+        ],
+        "ui": {
+          "x": 783.0,
+          "y": 180,
+          "zIndex": 5,
+          "widthName": 144,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino": {
+        "id": "nino",
+        "name": "nino",
+        "comment": "",
+        "columnIds": [
+          "nino__id_nino",
+          "nino__id_centro",
+          "nino__nombres",
+          "nino__apellidos",
+          "nino__fecha_nacimiento",
+          "nino__fecha_ingreso",
+          "nino__estado"
+        ],
+        "seqColumnIds": [
+          "nino__id_nino",
+          "nino__id_centro",
+          "nino__nombres",
+          "nino__apellidos",
+          "nino__fecha_nacimiento",
+          "nino__fecha_ingreso",
+          "nino__estado"
+        ],
+        "ui": {
+          "x": 2133.0,
+          "y": 180,
+          "zIndex": 6,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "apoderado": {
+        "id": "apoderado",
+        "name": "apoderado",
+        "comment": "",
+        "columnIds": [
+          "apoderado__id_apoderado",
+          "apoderado__id_persona",
+          "apoderado__fecha_alta"
+        ],
+        "seqColumnIds": [
+          "apoderado__id_apoderado",
+          "apoderado__id_persona",
+          "apoderado__fecha_alta"
+        ],
+        "ui": {
+          "x": 108.0,
+          "y": 1140,
+          "zIndex": 7,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista": {
+        "id": "especialista",
+        "name": "especialista",
+        "comment": "",
+        "columnIds": [
+          "especialista__id_especialista",
+          "especialista__id_persona",
+          "especialista__id_centro",
+          "especialista__profesion",
+          "especialista__especialidad_principal",
+          "especialista__numero_colegiatura",
+          "especialista__estado"
+        ],
+        "seqColumnIds": [
+          "especialista__id_especialista",
+          "especialista__id_persona",
+          "especialista__id_centro",
+          "especialista__profesion",
+          "especialista__especialidad_principal",
+          "especialista__numero_colegiatura",
+          "especialista__estado"
+        ],
+        "ui": {
+          "x": 1458.0,
+          "y": 660,
+          "zIndex": 8,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado": {
+        "id": "nino_apoderado",
+        "name": "nino_apoderado",
+        "comment": "",
+        "columnIds": [
+          "nino_apoderado__id_nino_apoderado",
+          "nino_apoderado__id_nino",
+          "nino_apoderado__id_apoderado",
+          "nino_apoderado__parentesco",
+          "nino_apoderado__es_principal",
+          "nino_apoderado__puede_consultar",
+          "nino_apoderado__fecha_vinculo"
+        ],
+        "seqColumnIds": [
+          "nino_apoderado__id_nino_apoderado",
+          "nino_apoderado__id_nino",
+          "nino_apoderado__id_apoderado",
+          "nino_apoderado__parentesco",
+          "nino_apoderado__es_principal",
+          "nino_apoderado__puede_consultar",
+          "nino_apoderado__fecha_vinculo"
+        ],
+        "ui": {
+          "x": 783.0,
+          "y": 1140,
+          "zIndex": 9,
+          "widthName": 112,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino": {
+        "id": "especialista_nino",
+        "name": "especialista_nino",
+        "comment": "",
+        "columnIds": [
+          "especialista_nino__id_asignacion",
+          "especialista_nino__id_especialista",
+          "especialista_nino__id_nino",
+          "especialista_nino__fecha_inicio",
+          "especialista_nino__fecha_fin",
+          "especialista_nino__funcion"
+        ],
+        "seqColumnIds": [
+          "especialista_nino__id_asignacion",
+          "especialista_nino__id_especialista",
+          "especialista_nino__id_nino",
+          "especialista_nino__fecha_inicio",
+          "especialista_nino__fecha_fin",
+          "especialista_nino__funcion"
+        ],
+        "ui": {
+          "x": 2133.0,
+          "y": 660,
+          "zIndex": 10,
+          "widthName": 136,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion": {
+        "id": "sesion",
+        "name": "sesion",
+        "comment": "",
+        "columnIds": [
+          "sesion__id_sesion",
+          "sesion__id_asignacion",
+          "sesion__fecha_sesion",
+          "sesion__hora_inicio",
+          "sesion__hora_fin",
+          "sesion__tipo_sesion"
+        ],
+        "seqColumnIds": [
+          "sesion__id_sesion",
+          "sesion__id_asignacion",
+          "sesion__fecha_sesion",
+          "sesion__hora_inicio",
+          "sesion__hora_fin",
+          "sesion__tipo_sesion"
+        ],
+        "ui": {
+          "x": 1458.0,
+          "y": 1140,
+          "zIndex": 11,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento": {
+        "id": "registro_seguimiento",
+        "name": "registro_seguimiento",
+        "comment": "",
+        "columnIds": [
+          "registro_seguimiento__id_registro",
+          "registro_seguimiento__id_sesion",
+          "registro_seguimiento__fecha_registro",
+          "registro_seguimiento__observaciones",
+          "registro_seguimiento__dificultades_identificadas",
+          "registro_seguimiento__recomendaciones",
+          "registro_seguimiento__visible_apoderado"
+        ],
+        "seqColumnIds": [
+          "registro_seguimiento__id_registro",
+          "registro_seguimiento__id_sesion",
+          "registro_seguimiento__fecha_registro",
+          "registro_seguimiento__observaciones",
+          "registro_seguimiento__dificultades_identificadas",
+          "registro_seguimiento__recomendaciones",
+          "registro_seguimiento__visible_apoderado"
+        ],
+        "ui": {
+          "x": 2133.0,
+          "y": 1140,
+          "zIndex": 12,
+          "widthName": 160,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo": {
+        "id": "objetivo",
+        "name": "objetivo",
+        "comment": "",
+        "columnIds": [
+          "objetivo__id_objetivo",
+          "objetivo__id_asignacion",
+          "objetivo__nombre_objetivo",
+          "objetivo__descripcion",
+          "objetivo__criterio_logro",
+          "objetivo__fecha_inicio",
+          "objetivo__fecha_fin_estimada",
+          "objetivo__estado"
+        ],
+        "seqColumnIds": [
+          "objetivo__id_objetivo",
+          "objetivo__id_asignacion",
+          "objetivo__nombre_objetivo",
+          "objetivo__descripcion",
+          "objetivo__criterio_logro",
+          "objetivo__fecha_inicio",
+          "objetivo__fecha_fin_estimada",
+          "objetivo__estado"
+        ],
+        "ui": {
+          "x": 2808.0,
+          "y": 660,
+          "zIndex": 13,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance": {
+        "id": "avance",
+        "name": "avance",
+        "comment": "",
+        "columnIds": [
+          "avance__id_avance",
+          "avance__id_objetivo",
+          "avance__id_registro",
+          "avance__descripcion_avance",
+          "avance__nivel_logro"
+        ],
+        "seqColumnIds": [
+          "avance__id_avance",
+          "avance__id_objetivo",
+          "avance__id_registro",
+          "avance__descripcion_avance",
+          "avance__nivel_logro"
+        ],
+        "ui": {
+          "x": 2808.0,
+          "y": 1140,
+          "zIndex": 14,
+          "widthName": 100,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto": {
+        "id": "documento_adjunto",
+        "name": "documento_adjunto",
+        "comment": "",
+        "columnIds": [
+          "documento_adjunto__id_documento",
+          "documento_adjunto__id_nino",
+          "documento_adjunto__id_usuario_carga",
+          "documento_adjunto__nombre_archivo",
+          "documento_adjunto__tipo_archivo",
+          "documento_adjunto__referencia_archivo",
+          "documento_adjunto__fecha_carga",
+          "documento_adjunto__visible_apoderado"
+        ],
+        "seqColumnIds": [
+          "documento_adjunto__id_documento",
+          "documento_adjunto__id_nino",
+          "documento_adjunto__id_usuario_carga",
+          "documento_adjunto__nombre_archivo",
+          "documento_adjunto__tipo_archivo",
+          "documento_adjunto__referencia_archivo",
+          "documento_adjunto__fecha_carga",
+          "documento_adjunto__visible_apoderado"
+        ],
+        "ui": {
+          "x": 2808.0,
+          "y": 180,
+          "zIndex": 15,
+          "widthName": 136,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      }
+    },
+    "tableColumnEntities": {
+      "centro__id_centro": {
+        "id": "centro__id_centro",
+        "tableId": "centro",
+        "name": "id_centro",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "centro__nombre_centro": {
+        "id": "centro__nombre_centro",
+        "tableId": "centro",
+        "name": "nombre_centro",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "centro__direccion": {
+        "id": "centro__direccion",
+        "tableId": "centro",
+        "name": "direccion",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "centro__telefono": {
+        "id": "centro__telefono",
+        "tableId": "centro",
+        "name": "telefono",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "centro__correo": {
+        "id": "centro__correo",
+        "tableId": "centro",
+        "name": "correo",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "centro__estado": {
+        "id": "centro__estado",
+        "tableId": "centro",
+        "name": "estado",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__id_persona": {
+        "id": "persona__id_persona",
+        "tableId": "persona",
+        "name": "id_persona",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__nombres": {
+        "id": "persona__nombres",
+        "tableId": "persona",
+        "name": "nombres",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__apellidos": {
+        "id": "persona__apellidos",
+        "tableId": "persona",
+        "name": "apellidos",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__tipo_documento": {
+        "id": "persona__tipo_documento",
+        "tableId": "persona",
+        "name": "tipo_documento",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__numero_documento": {
+        "id": "persona__numero_documento",
+        "tableId": "persona",
+        "name": "numero_documento",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__telefono": {
+        "id": "persona__telefono",
+        "tableId": "persona",
+        "name": "telefono",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "persona__correo": {
+        "id": "persona__correo",
+        "tableId": "persona",
+        "name": "correo",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario__id_usuario": {
+        "id": "usuario__id_usuario",
+        "tableId": "usuario",
+        "name": "id_usuario",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario__id_persona": {
+        "id": "usuario__id_persona",
+        "tableId": "usuario",
+        "name": "id_persona",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario__nombre_usuario": {
+        "id": "usuario__nombre_usuario",
+        "tableId": "usuario",
+        "name": "nombre_usuario",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario__contrasena_hash": {
+        "id": "usuario__contrasena_hash",
+        "tableId": "usuario",
+        "name": "contrasena_hash",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario__fecha_alta": {
+        "id": "usuario__fecha_alta",
+        "tableId": "usuario",
+        "name": "fecha_alta",
+        "comment": "",
+        "dataType": "datetime",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario__estado": {
+        "id": "usuario__estado",
+        "tableId": "usuario",
+        "name": "estado",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "rol__id_rol": {
+        "id": "rol__id_rol",
+        "tableId": "rol",
+        "name": "id_rol",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "rol__nombre_rol": {
+        "id": "rol__nombre_rol",
+        "tableId": "rol",
+        "name": "nombre_rol",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "rol__descripcion": {
+        "id": "rol__descripcion",
+        "tableId": "rol",
+        "name": "descripcion",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario_centro_rol__id_usuario": {
+        "id": "usuario_centro_rol__id_usuario",
+        "tableId": "usuario_centro_rol",
+        "name": "id_usuario",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 3,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario_centro_rol__id_centro": {
+        "id": "usuario_centro_rol__id_centro",
+        "tableId": "usuario_centro_rol",
+        "name": "id_centro",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 3,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "usuario_centro_rol__id_rol": {
+        "id": "usuario_centro_rol__id_rol",
+        "tableId": "usuario_centro_rol",
+        "name": "id_rol",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 3,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__id_nino": {
+        "id": "nino__id_nino",
+        "tableId": "nino",
+        "name": "id_nino",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__id_centro": {
+        "id": "nino__id_centro",
+        "tableId": "nino",
+        "name": "id_centro",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__nombres": {
+        "id": "nino__nombres",
+        "tableId": "nino",
+        "name": "nombres",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__apellidos": {
+        "id": "nino__apellidos",
+        "tableId": "nino",
+        "name": "apellidos",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__fecha_nacimiento": {
+        "id": "nino__fecha_nacimiento",
+        "tableId": "nino",
+        "name": "fecha_nacimiento",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__fecha_ingreso": {
+        "id": "nino__fecha_ingreso",
+        "tableId": "nino",
+        "name": "fecha_ingreso",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino__estado": {
+        "id": "nino__estado",
+        "tableId": "nino",
+        "name": "estado",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "apoderado__id_apoderado": {
+        "id": "apoderado__id_apoderado",
+        "tableId": "apoderado",
+        "name": "id_apoderado",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "apoderado__id_persona": {
+        "id": "apoderado__id_persona",
+        "tableId": "apoderado",
+        "name": "id_persona",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "apoderado__fecha_alta": {
+        "id": "apoderado__fecha_alta",
+        "tableId": "apoderado",
+        "name": "fecha_alta",
+        "comment": "",
+        "dataType": "datetime",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__id_especialista": {
+        "id": "especialista__id_especialista",
+        "tableId": "especialista",
+        "name": "id_especialista",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__id_persona": {
+        "id": "especialista__id_persona",
+        "tableId": "especialista",
+        "name": "id_persona",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__id_centro": {
+        "id": "especialista__id_centro",
+        "tableId": "especialista",
+        "name": "id_centro",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__profesion": {
+        "id": "especialista__profesion",
+        "tableId": "especialista",
+        "name": "profesion",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__especialidad_principal": {
+        "id": "especialista__especialidad_principal",
+        "tableId": "especialista",
+        "name": "especialidad_principal",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__numero_colegiatura": {
+        "id": "especialista__numero_colegiatura",
+        "tableId": "especialista",
+        "name": "numero_colegiatura",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista__estado": {
+        "id": "especialista__estado",
+        "tableId": "especialista",
+        "name": "estado",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__id_nino_apoderado": {
+        "id": "nino_apoderado__id_nino_apoderado",
+        "tableId": "nino_apoderado",
+        "name": "id_nino_apoderado",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__id_nino": {
+        "id": "nino_apoderado__id_nino",
+        "tableId": "nino_apoderado",
+        "name": "id_nino",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__id_apoderado": {
+        "id": "nino_apoderado__id_apoderado",
+        "tableId": "nino_apoderado",
+        "name": "id_apoderado",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__parentesco": {
+        "id": "nino_apoderado__parentesco",
+        "tableId": "nino_apoderado",
+        "name": "parentesco",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__es_principal": {
+        "id": "nino_apoderado__es_principal",
+        "tableId": "nino_apoderado",
+        "name": "es_principal",
+        "comment": "",
+        "dataType": "bit",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__puede_consultar": {
+        "id": "nino_apoderado__puede_consultar",
+        "tableId": "nino_apoderado",
+        "name": "puede_consultar",
+        "comment": "",
+        "dataType": "bit",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__fecha_vinculo": {
+        "id": "nino_apoderado__fecha_vinculo",
+        "tableId": "nino_apoderado",
+        "name": "fecha_vinculo",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__id_asignacion": {
+        "id": "especialista_nino__id_asignacion",
+        "tableId": "especialista_nino",
+        "name": "id_asignacion",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__id_especialista": {
+        "id": "especialista_nino__id_especialista",
+        "tableId": "especialista_nino",
+        "name": "id_especialista",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__id_nino": {
+        "id": "especialista_nino__id_nino",
+        "tableId": "especialista_nino",
+        "name": "id_nino",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__fecha_inicio": {
+        "id": "especialista_nino__fecha_inicio",
+        "tableId": "especialista_nino",
+        "name": "fecha_inicio",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__fecha_fin": {
+        "id": "especialista_nino__fecha_fin",
+        "tableId": "especialista_nino",
+        "name": "fecha_fin",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__funcion": {
+        "id": "especialista_nino__funcion",
+        "tableId": "especialista_nino",
+        "name": "funcion",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion__id_sesion": {
+        "id": "sesion__id_sesion",
+        "tableId": "sesion",
+        "name": "id_sesion",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion__id_asignacion": {
+        "id": "sesion__id_asignacion",
+        "tableId": "sesion",
+        "name": "id_asignacion",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion__fecha_sesion": {
+        "id": "sesion__fecha_sesion",
+        "tableId": "sesion",
+        "name": "fecha_sesion",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion__hora_inicio": {
+        "id": "sesion__hora_inicio",
+        "tableId": "sesion",
+        "name": "hora_inicio",
+        "comment": "",
+        "dataType": "time",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion__hora_fin": {
+        "id": "sesion__hora_fin",
+        "tableId": "sesion",
+        "name": "hora_fin",
+        "comment": "",
+        "dataType": "time",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "sesion__tipo_sesion": {
+        "id": "sesion__tipo_sesion",
+        "tableId": "sesion",
+        "name": "tipo_sesion",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__id_registro": {
+        "id": "registro_seguimiento__id_registro",
+        "tableId": "registro_seguimiento",
+        "name": "id_registro",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__id_sesion": {
+        "id": "registro_seguimiento__id_sesion",
+        "tableId": "registro_seguimiento",
+        "name": "id_sesion",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__fecha_registro": {
+        "id": "registro_seguimiento__fecha_registro",
+        "tableId": "registro_seguimiento",
+        "name": "fecha_registro",
+        "comment": "",
+        "dataType": "datetime",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__observaciones": {
+        "id": "registro_seguimiento__observaciones",
+        "tableId": "registro_seguimiento",
+        "name": "observaciones",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__dificultades_identificadas": {
+        "id": "registro_seguimiento__dificultades_identificadas",
+        "tableId": "registro_seguimiento",
+        "name": "dificultades_identificadas",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__recomendaciones": {
+        "id": "registro_seguimiento__recomendaciones",
+        "tableId": "registro_seguimiento",
+        "name": "recomendaciones",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "registro_seguimiento__visible_apoderado": {
+        "id": "registro_seguimiento__visible_apoderado",
+        "tableId": "registro_seguimiento",
+        "name": "visible_apoderado",
+        "comment": "",
+        "dataType": "bit",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__id_objetivo": {
+        "id": "objetivo__id_objetivo",
+        "tableId": "objetivo",
+        "name": "id_objetivo",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__id_asignacion": {
+        "id": "objetivo__id_asignacion",
+        "tableId": "objetivo",
+        "name": "id_asignacion",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__nombre_objetivo": {
+        "id": "objetivo__nombre_objetivo",
+        "tableId": "objetivo",
+        "name": "nombre_objetivo",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__descripcion": {
+        "id": "objetivo__descripcion",
+        "tableId": "objetivo",
+        "name": "descripcion",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__criterio_logro": {
+        "id": "objetivo__criterio_logro",
+        "tableId": "objetivo",
+        "name": "criterio_logro",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__fecha_inicio": {
+        "id": "objetivo__fecha_inicio",
+        "tableId": "objetivo",
+        "name": "fecha_inicio",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__fecha_fin_estimada": {
+        "id": "objetivo__fecha_fin_estimada",
+        "tableId": "objetivo",
+        "name": "fecha_fin_estimada",
+        "comment": "",
+        "dataType": "date",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "objetivo__estado": {
+        "id": "objetivo__estado",
+        "tableId": "objetivo",
+        "name": "estado",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__id_avance": {
+        "id": "avance__id_avance",
+        "tableId": "avance",
+        "name": "id_avance",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__id_objetivo": {
+        "id": "avance__id_objetivo",
+        "tableId": "avance",
+        "name": "id_objetivo",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__id_registro": {
+        "id": "avance__id_registro",
+        "tableId": "avance",
+        "name": "id_registro",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__descripcion_avance": {
+        "id": "avance__descripcion_avance",
+        "tableId": "avance",
+        "name": "descripcion_avance",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__nivel_logro": {
+        "id": "avance__nivel_logro",
+        "tableId": "avance",
+        "name": "nivel_logro",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__id_documento": {
+        "id": "documento_adjunto__id_documento",
+        "tableId": "documento_adjunto",
+        "name": "id_documento",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__id_nino": {
+        "id": "documento_adjunto__id_nino",
+        "tableId": "documento_adjunto",
+        "name": "id_nino",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__id_usuario_carga": {
+        "id": "documento_adjunto__id_usuario_carga",
+        "tableId": "documento_adjunto",
+        "name": "id_usuario_carga",
+        "comment": "",
+        "dataType": "int",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__nombre_archivo": {
+        "id": "documento_adjunto__nombre_archivo",
+        "tableId": "documento_adjunto",
+        "name": "nombre_archivo",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__tipo_archivo": {
+        "id": "documento_adjunto__tipo_archivo",
+        "tableId": "documento_adjunto",
+        "name": "tipo_archivo",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__referencia_archivo": {
+        "id": "documento_adjunto__referencia_archivo",
+        "tableId": "documento_adjunto",
+        "name": "referencia_archivo",
+        "comment": "",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__fecha_carga": {
+        "id": "documento_adjunto__fecha_carga",
+        "tableId": "documento_adjunto",
+        "name": "fecha_carga",
+        "comment": "",
+        "dataType": "datetime",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "documento_adjunto__visible_apoderado": {
+        "id": "documento_adjunto__visible_apoderado",
+        "tableId": "documento_adjunto",
+        "name": "visible_apoderado",
+        "comment": "",
+        "dataType": "bit",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 265,
+          "widthComment": 60,
+          "widthDataType": 105,
+          "widthDefault": 60
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      }
+    },
+    "relationshipEntities": {
+      "R01": {
+        "id": "R01",
+        "identification": false,
+        "relationshipType": 8,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "persona",
+          "columnIds": [
+            "persona__id_persona"
+          ],
+          "x": 783.0,
+          "y": 759.0,
+          "direction": 1
+        },
+        "end": {
+          "tableId": "usuario",
+          "columnIds": [
+            "usuario__id_persona"
+          ],
+          "x": 567.0,
+          "y": 747.0,
+          "direction": 2
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R02": {
+        "id": "R02",
+        "identification": false,
+        "relationshipType": 8,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "persona",
+          "columnIds": [
+            "persona__id_persona"
+          ],
+          "x": 783.0,
+          "y": 759.0,
+          "direction": 1
+        },
+        "end": {
+          "tableId": "apoderado",
+          "columnIds": [
+            "apoderado__id_persona"
+          ],
+          "x": 567.0,
+          "y": 1191.0,
+          "direction": 2
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R03": {
+        "id": "R03",
+        "identification": false,
+        "relationshipType": 8,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "persona",
+          "columnIds": [
+            "persona__id_persona"
+          ],
+          "x": 1242.0,
+          "y": 759.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "especialista",
+          "columnIds": [
+            "especialista__id_persona"
+          ],
+          "x": 1458.0,
+          "y": 759.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R04": {
+        "id": "R04",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "centro",
+          "columnIds": [
+            "centro__id_centro"
+          ],
+          "x": 1687.5,
+          "y": 354,
+          "direction": 8
+        },
+        "end": {
+          "tableId": "especialista",
+          "columnIds": [
+            "especialista__id_centro"
+          ],
+          "x": 1687.5,
+          "y": 660,
+          "direction": 4
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R05": {
+        "id": "R05",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "centro",
+          "columnIds": [
+            "centro__id_centro"
+          ],
+          "x": 1917.0000000000002,
+          "y": 267.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "nino",
+          "columnIds": [
+            "nino__id_centro"
+          ],
+          "x": 2133.0,
+          "y": 279.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R06": {
+        "id": "R06",
+        "identification": true,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "usuario",
+          "columnIds": [
+            "usuario__id_usuario"
+          ],
+          "x": 567.0,
+          "y": 747.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "usuario_centro_rol",
+          "columnIds": [
+            "usuario_centro_rol__id_usuario"
+          ],
+          "x": 783.0,
+          "y": 231.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R07": {
+        "id": "R07",
+        "identification": true,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "centro",
+          "columnIds": [
+            "centro__id_centro"
+          ],
+          "x": 1458.0,
+          "y": 267.0,
+          "direction": 1
+        },
+        "end": {
+          "tableId": "usuario_centro_rol",
+          "columnIds": [
+            "usuario_centro_rol__id_centro"
+          ],
+          "x": 1242.0,
+          "y": 231.0,
+          "direction": 2
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R08": {
+        "id": "R08",
+        "identification": true,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "rol",
+          "columnIds": [
+            "rol__id_rol"
+          ],
+          "x": 567.0,
+          "y": 231.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "usuario_centro_rol",
+          "columnIds": [
+            "usuario_centro_rol__id_rol"
+          ],
+          "x": 783.0,
+          "y": 231.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R09": {
+        "id": "R09",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "nino",
+          "columnIds": [
+            "nino__id_nino"
+          ],
+          "x": 2133.0,
+          "y": 279.0,
+          "direction": 1
+        },
+        "end": {
+          "tableId": "nino_apoderado",
+          "columnIds": [
+            "nino_apoderado__id_nino"
+          ],
+          "x": 1242.0,
+          "y": 1239.0,
+          "direction": 2
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R10": {
+        "id": "R10",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "apoderado",
+          "columnIds": [
+            "apoderado__id_apoderado"
+          ],
+          "x": 567.0,
+          "y": 1191.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "nino_apoderado",
+          "columnIds": [
+            "nino_apoderado__id_apoderado"
+          ],
+          "x": 783.0,
+          "y": 1239.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R11": {
+        "id": "R11",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "especialista",
+          "columnIds": [
+            "especialista__id_especialista"
+          ],
+          "x": 1917.0000000000002,
+          "y": 759.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "especialista_nino",
+          "columnIds": [
+            "especialista_nino__id_especialista"
+          ],
+          "x": 2133.0,
+          "y": 747.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R12": {
+        "id": "R12",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "nino",
+          "columnIds": [
+            "nino__id_nino"
+          ],
+          "x": 2362.5,
+          "y": 378,
+          "direction": 8
+        },
+        "end": {
+          "tableId": "especialista_nino",
+          "columnIds": [
+            "especialista_nino__id_nino"
+          ],
+          "x": 2362.5,
+          "y": 660,
+          "direction": 4
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R13": {
+        "id": "R13",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "especialista_nino",
+          "columnIds": [
+            "especialista_nino__id_asignacion"
+          ],
+          "x": 2133.0,
+          "y": 747.0,
+          "direction": 1
+        },
+        "end": {
+          "tableId": "sesion",
+          "columnIds": [
+            "sesion__id_asignacion"
+          ],
+          "x": 1917.0000000000002,
+          "y": 1227.0,
+          "direction": 2
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R14": {
+        "id": "R14",
+        "identification": false,
+        "relationshipType": 8,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "sesion",
+          "columnIds": [
+            "sesion__id_sesion"
+          ],
+          "x": 1917.0000000000002,
+          "y": 1227.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "registro_seguimiento",
+          "columnIds": [
+            "registro_seguimiento__id_sesion"
+          ],
+          "x": 2133.0,
+          "y": 1239.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R15": {
+        "id": "R15",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "especialista_nino",
+          "columnIds": [
+            "especialista_nino__id_asignacion"
+          ],
+          "x": 2592.0,
+          "y": 747.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "objetivo",
+          "columnIds": [
+            "objetivo__id_asignacion"
+          ],
+          "x": 2808.0,
+          "y": 771.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R16": {
+        "id": "R16",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "objetivo",
+          "columnIds": [
+            "objetivo__id_objetivo"
+          ],
+          "x": 3037.5,
+          "y": 882,
+          "direction": 8
+        },
+        "end": {
+          "tableId": "avance",
+          "columnIds": [
+            "avance__id_objetivo"
+          ],
+          "x": 3037.5,
+          "y": 1140,
+          "direction": 4
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R17": {
+        "id": "R17",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "registro_seguimiento",
+          "columnIds": [
+            "registro_seguimiento__id_registro"
+          ],
+          "x": 2592.0,
+          "y": 1239.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "avance",
+          "columnIds": [
+            "avance__id_registro"
+          ],
+          "x": 2808.0,
+          "y": 1215.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R18": {
+        "id": "R18",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "nino",
+          "columnIds": [
+            "nino__id_nino"
+          ],
+          "x": 2592.0,
+          "y": 279.0,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "documento_adjunto",
+          "columnIds": [
+            "documento_adjunto__id_nino"
+          ],
+          "x": 2808.0,
+          "y": 291.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "R19": {
+        "id": "R19",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "usuario",
+          "columnIds": [
+            "usuario__id_usuario"
+          ],
+          "x": 337.5,
+          "y": 660,
+          "direction": 4
+        },
+        "end": {
+          "tableId": "documento_adjunto",
+          "columnIds": [
+            "documento_adjunto__id_usuario_carga"
+          ],
+          "x": 2808.0,
+          "y": 291.0,
+          "direction": 1
+        },
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      }
+    },
+    "indexEntities": {
+      "nino_apoderado__regla_1": {
+        "id": "nino_apoderado__regla_1",
+        "name": "sin_duplicados_nino_apoderado",
+        "tableId": "nino_apoderado",
+        "indexColumnIds": [
+          "nino_apoderado__regla_1__id_nino",
+          "nino_apoderado__regla_1__id_apoderado"
+        ],
+        "seqIndexColumnIds": [
+          "nino_apoderado__regla_1__id_nino",
+          "nino_apoderado__regla_1__id_apoderado"
+        ],
+        "unique": true,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__regla_1": {
+        "id": "especialista_nino__regla_1",
+        "name": "sin_duplicados_especialista_nino",
+        "tableId": "especialista_nino",
+        "indexColumnIds": [
+          "especialista_nino__regla_1__id_especialista",
+          "especialista_nino__regla_1__id_nino",
+          "especialista_nino__regla_1__fecha_inicio"
+        ],
+        "seqIndexColumnIds": [
+          "especialista_nino__regla_1__id_especialista",
+          "especialista_nino__regla_1__id_nino",
+          "especialista_nino__regla_1__fecha_inicio"
+        ],
+        "unique": true,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__regla_1": {
+        "id": "avance__regla_1",
+        "name": "sin_duplicados_avance",
+        "tableId": "avance",
+        "indexColumnIds": [
+          "avance__regla_1__id_objetivo",
+          "avance__regla_1__id_registro"
+        ],
+        "seqIndexColumnIds": [
+          "avance__regla_1__id_objetivo",
+          "avance__regla_1__id_registro"
+        ],
+        "unique": true,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      }
+    },
+    "indexColumnEntities": {
+      "nino_apoderado__regla_1__id_nino": {
+        "id": "nino_apoderado__regla_1__id_nino",
+        "indexId": "nino_apoderado__regla_1",
+        "columnId": "nino_apoderado__id_nino",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "nino_apoderado__regla_1__id_apoderado": {
+        "id": "nino_apoderado__regla_1__id_apoderado",
+        "indexId": "nino_apoderado__regla_1",
+        "columnId": "nino_apoderado__id_apoderado",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__regla_1__id_especialista": {
+        "id": "especialista_nino__regla_1__id_especialista",
+        "indexId": "especialista_nino__regla_1",
+        "columnId": "especialista_nino__id_especialista",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__regla_1__id_nino": {
+        "id": "especialista_nino__regla_1__id_nino",
+        "indexId": "especialista_nino__regla_1",
+        "columnId": "especialista_nino__id_nino",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "especialista_nino__regla_1__fecha_inicio": {
+        "id": "especialista_nino__regla_1__fecha_inicio",
+        "indexId": "especialista_nino__regla_1",
+        "columnId": "especialista_nino__fecha_inicio",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__regla_1__id_objetivo": {
+        "id": "avance__regla_1__id_objetivo",
+        "indexId": "avance__regla_1",
+        "columnId": "avance__id_objetivo",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      },
+      "avance__regla_1__id_registro": {
+        "id": "avance__regla_1__id_registro",
+        "indexId": "avance__regla_1",
+        "columnId": "avance__id_registro",
+        "orderType": 1,
+        "meta": {
+          "createAt": 1791604483581,
+          "updateAt": 1791604483581
+        }
+      }
+    },
+    "memoEntities": {}
+  }
+}
